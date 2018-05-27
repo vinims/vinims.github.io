@@ -1,0 +1,59 @@
+* {
+    text-align: center;
+}
+
+figure img {
+    width: 100%;
+}
+
+.forecast {
+    display: none;
+}
+
+header img, header h1, header h2 {
+    float: left;
+}
+
+header h1 {
+    color: blue;
+}
+
+.current {
+    float: left;
+    width: 100%;
+}
+
+.current p {
+    width: 50%;
+}
+
+.current picture img {
+    width: 30%;
+}
+
+.highlow{
+    float: left;
+}
+
+footer {
+    background-color: blue;
+}
+
+.footer-bar{
+    background-color: darkblue;
+    color: white;
+}
+
+.articlepic {
+    width: 80%;
+}
+
+
+
+/* from small view to medium view changing/breaking at ~600px	*/
+
+@media only screen and (min-width: 37.5em)
+    
+/*from medium view to large changing/breaking at ~1024px	*/
+    
+@media only screen and (min-width: 64em)

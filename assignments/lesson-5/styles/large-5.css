@@ -1,0 +1,21 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: inline;
+}
+
+
+
+
+
+/* from small view to medium view changing/breaking at ~600px	*/
+
+@media only screen and (min-width: 37.5em)
+    
+/*from medium view to large changing/breaking at ~1024px	*/
+    
+@media only screen and (min-width: 64em)
