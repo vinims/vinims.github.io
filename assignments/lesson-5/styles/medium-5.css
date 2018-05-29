@@ -51,7 +51,7 @@
        display: inline-block;
         border: 1px solid black;
         width: 90%;
-        margin: 0 auto;
+        margin: 2em;
         background-color: gray; float: left;
     }
     .forecast h3 {
@@ -69,6 +69,7 @@
          border: 1px solid;
     }
     article{
+        float: left;
         margin: auto;
         width: 90%;
     }
