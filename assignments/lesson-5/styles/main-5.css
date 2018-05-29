@@ -1,13 +1,14 @@
 * {
     text-align: center;
     font-family: arial;
+
 }
 
 nav {
     display: none;
 }
 
-figure img {
+.mainimage {
     width: 100%;
 }
 
