@@ -36,7 +36,43 @@
         
     }
     
+    .weather-summary {
+        width: 100%;
+    }
+    
+    .current {
+    float: left;
+    width: 30%;
+}
 
+    .current p {
+        width: 40%;
+        float: left;
+        text-align: 
+    }
+
+    .current picture img {
+        width: 40%;
+        float: left;
+    }
+
+    .highlow {
+        float:left;
+        width: 30%;
+    }
+    
+    .highlow p {
+        float:left;
+        width: 100%;
+    }
+
+    .conditions {
+        float:left;
+        width: 30%;   
+    }
+
+    
+    
     footer{
         float: left;
     }
