@@ -3,7 +3,9 @@
 @media only screen and (min-width: 37.5em) {
 
 
-    
+    .hamburger { display: none;}
+
+.navigation li { display: inline-block; }
    table {
     border-collapse: collapse;
 }

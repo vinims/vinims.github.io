@@ -1,0 +1,114 @@
+* {
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+
+}
+
+.hamburger { display: block;position: absolute;top: 2.0rem;right: 1.25rem; }
+
+.navigation { list-style: none; padding-left: 0; }
+.navigation li { display: none; }
+
+/* When the responsive class is added to the unordered list on hamburger button click 
+placed in a media query in order to accomodate the toggle when in wider view*/
+@media only screen and (max-width: 37.5em) {
+	.navigation.responsive { position: relative; }
+	.navigation.responsive li { background-color: #eee;	display: block;	width: 100%; margin: 2px 0;	border: 1px solid #ddd; }
+	.navigation.responsive li a {	padding: 1rem; text-align: center;	display: block; text-decoration:none; }
+	.navigation.responsive li a:hover { background-color: #ddd; }
+}
+
+
+
+
+@media only screen and (min-width: 37.5em) {
+	header,	nav {	margin: 0 auto;	max-width: 600px;	}
+	h1 { text-align: center; }
+	.hamburger { display: none;	}
+	.navigation {	background-color: #333;	overflow: hidden;	text-align: center;	}
+	.navigation li { display: inline-block; margin-left: .25rem; }
+	.navigation a {	display: block;	color: #eee;	padding: .5rem;	text-align: center;	text-decoration: none;}
+	.navigation a:hover {	color: #000; background-color: #777;	}
+}
+
+.mainimage {
+    width: 100%;
+}
+
+.forecast {
+    display: none;
+}
+
+#logo{
+    width: 30%;
+    margin-left: 5%;
+}
+
+header h1 {
+    width: 60%;
+}
+
+header img, header h1, header h2 {
+    float: left;
+}
+
+header h1 {
+    color: blue;
+}
+
+.current {
+    float: left;
+    width: 100%;
+}
+
+.current p {
+    width: 40%;
+    float: left;
+    text-align: 
+}
+
+.current picture img {
+    width: 30%;
+        float: left;
+}
+
+.highlow p{
+    float:left;
+    width: 50%;
+}
+
+.conditions {
+    width: 100%;   
+}
+
+article {
+    margin: auto;
+    width: 90%;
+    border: 1px solid gray;
+}
+
+footer {
+    background-color: #8EB0CD;
+    padding-top: 10px;
+    width: 90%;
+    margin: auto;
+}
+
+.footertitle{
+    font-weight: bold;
+}
+
+.contact p {
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+.footer-bar{
+    margin-top: 10px;
+    background-color: #007EC4;
+    color: white;
+}
+
+.articlepic {
+    width: 80%;
+}
