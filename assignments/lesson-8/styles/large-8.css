@@ -1,0 +1,26 @@
+/*from medium view to large changing/breaking at ~1024px	*/
+    
+@media only screen and (min-width: 64em){
+    
+#logo{
+    width: 20%;
+    margin-left: 5%;
+    margin-right: 10%;
+    }
+    
+    .secondsec{
+        flex-direction: column ;
+    }
+    
+    .secondsec picture {
+        width: 100%;
+        
+    }
+    
+    #sunemot {
+        width: 30%;
+    }
+    #gallerysec {
+        grid-template-columns: auto auto auto;    
+    }
+}

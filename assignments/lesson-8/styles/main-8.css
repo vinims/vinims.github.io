@@ -1,0 +1,167 @@
+* {
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+
+}
+
+.hamburger {
+    display: block;
+    position: absolute;
+    top: 2.0rem;
+    right: 1.25rem;
+}
+
+.navigation {
+    list-style: none;
+    padding-left: 0;
+}
+
+.navigation li {
+    display: none;
+}
+
+/* When the responsive class is added to the unordered list on hamburger button click 
+placed in a media query in order to accomodate the toggle when in wider view*/
+
+@media only screen and (max-width: 37.5em) {
+    .navigation.responsive {
+        position: relative;
+    }
+    .navigation.responsive li {
+        background-color: #eee;
+        display: block;
+        width: 100%;
+        margin: 2px 0;
+        border: 1px solid #ddd;
+    }
+    .navigation.responsive li a {
+        padding: 1rem;
+        text-align: center;
+        display: block;
+        text-decoration: none;
+    }
+    .navigation.responsive li a:hover {
+        background-color: #ddd;
+    }
+}
+
+.mainimage {
+    width: 100%;
+}
+
+.forecast {
+    display: none;
+}
+
+#logo {
+    width: 30%;
+    margin-left: 5%;
+}
+
+header {
+    display: flex;
+}
+
+header h1 {
+    color: blue;
+}
+
+.weather-summary {
+    margin: 5% 10%;
+    display: flex;
+    align-items: center;
+    align-self: stretch;
+}
+
+#sunemot {
+    width: 30%;
+}
+
+article {
+    margin: auto;
+    width: 90%;
+    border: 1px solid gray;
+}
+
+footer {
+    background-color: #8EB0CD;
+    padding-top: 10px;
+    width: 90%;
+    margin: auto;
+}
+
+.footertitle {
+    font-weight: bold;
+}
+
+.contact p {
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+.footer-bar {
+    margin-top: 10px;
+    background-color: #007EC4;
+    color: white;
+}
+
+.articlepic {
+    width: 80%;
+}
+
+/* Gallery */
+
+#gallerysec {
+    display: grid;
+    grid-template-columns: auto;    
+}
+
+#gallerysec a img:hover {
+    box-shadow: 5px 5px 10px gray;
+    
+}
+
+/* FORM */
+form {
+    
+}
+
+fieldset {
+    border: 1px solid black;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+
+label {
+    text-align: left;
+    display: block;
+    padding-top: 1.5rem;
+}
+
+input, select {
+    display: block;
+    padding: .75em;
+    text-align: left;
+}
+
+span {
+    display: block;
+    float: left;
+}
+
+.Userdanger {
+    text-align: left;
+    padding-top: 1.5rem;
+}
+
+.Userdanger input {
+    float: left;
+    display: inline-block;
+}
+
+.submitBtn{
+    margin: 0 auto;
+}
+
