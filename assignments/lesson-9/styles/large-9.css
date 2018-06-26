@@ -18,7 +18,7 @@
     }
     
     #sunemot {
-        width: 30%;
+        width: 100px;
     }
     #gallerysec {
         grid-template-columns: auto auto auto;    

@@ -50,7 +50,7 @@
 
         <section class="weather-summary">
             <div>
-                <p>Sunny</p>
+                <p id="Wdescription">Sunny</p>
                 <p>High: </p><p id="highT">90°F</p>
             </div>
             <div>
@@ -65,6 +65,7 @@
                 </div>
             </div>
             <div>
+                <p>Current Temperature: </p><p id="TempC">66°F</p>
                 <p>Low: </p><p id="LowT">66°F</p>
             </div>
             <br>
@@ -162,7 +163,34 @@
 
         document.getElementById("currentdate").innerHTML = setweek + ", " + setday + " " + setmonth + " " + setyear;
     </script>    
-    <script src="scripts/windchill.js"></script>
+    <script>
+        var weatherRequest = new XMLHttpRequest();
+
+        var apiURL = "http://api.openweathermap.org/data/2.5/forecast?id=4156210&APPID=6a274f6ccb2c7781e5011ec433a0f665&units=Imperial";
+
+        weatherRequest.open('GET', apiURL, true);
+        weatherRequest.send();   
+
+        weatherRequest.onload =  function () {
+          var weatherData = JSON.parse(weatherRequest.responseText);
+            
+            var apiWdescription = weatherData.list[0].weather[0].main;
+            var apiTempC = weatherData.list[0].main.temp;
+            var apihighT = weatherData.list[0].main.temp_max;
+            var apiLowT = weatherData.list[0].main.temp_min;
+            var apiwindS = weatherData.list[0].wind.speed;
+            var apiIcon = weatherData.list[0].weather[0].icon;
+            var iconURL = 'http://openweathermap.org/img/w/' + apiIcon + '.png';
+            
+            document.getElementById('Wdescription').innerHTML = apiWdescription;
+            document.getElementById('TempC').innerHTML = apiTempC + ' °F';
+            document.getElementById('highT').innerHTML = apihighT + ' °F';
+            document.getElementById('LowT').innerHTML = apiLowT + ' °F';
+            document.getElementById('windS').innerHTML = apiwindS + ' mpg SW';
+            document.getElementById('sunemot').src = iconURL;
+        };
+
+    </script>
 </body>
 
 </html>
