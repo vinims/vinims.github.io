@@ -47,18 +47,26 @@ placed in a media query in order to accomodate the toggle when in wider view*/
 
 #listcitysec {
     margin: 0 auto;
-    width: 50%;
+    width: 80%;
     text-align: center;
-}
-
-#listcitysec div{
-    float: left;
-    width: 33.33%;
 }
 
 #listcitysec div img{
     width: 80%;
 }
+
+#stormsection img{
+    width: 80%;
+}
+
+#citiesstripes{
+    margin-top: 20px;
+}
+
+#citiesstripes img{
+    width: 80%;
+}
+
 
 /* subPages */
 
@@ -83,6 +91,7 @@ header h1 {
     color: blue;
 }
 
+
 .weather-summary {
     margin: 5% 10%;
     display: flex;
@@ -101,10 +110,11 @@ article {
 }
 
 footer {
-    background-color: #8EB0CD;
+    background-color: #688f6d;
     padding-top: 10px;
-    width: 90%;
+    width: 100%;
     margin: auto;
+    margin-top: 20px;
 }
 
 .footertitle {
@@ -137,3 +147,48 @@ footer {
     box-shadow: 5px 5px 10px gray;
     
 }
+
+/* FORM */
+form {
+    
+}
+
+fieldset {
+    border: 1px solid black;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+
+label {
+    text-align: left;
+    display: block;
+    padding-top: 1.5rem;
+}
+
+input, select {
+    display: block;
+    padding: .75em;
+    text-align: left;
+}
+
+span {
+    display: block;
+    float: left;
+}
+
+.Userdanger {
+    text-align: left;
+    padding-top: 1.5rem;
+}
+
+.Userdanger input {
+    float: left;
+    display: inline-block;
+}
+
+.submitBtn{
+    margin: 0 auto;
+}
+

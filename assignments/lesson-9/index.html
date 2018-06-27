@@ -18,31 +18,53 @@
 
 <body>
     <header>
-    
-    
+        <img src="images/download.png" alt="" id="logo">
+        <div>
+            <h1>The Weather Today</h1>
+            <h2>The most accurate forecast</h2>
+        </div>
     </header>
+    <button class="hamburger" onclick="toggleHam()">&#9776;</button>
     <nav>
         <ul class="navigation">
-            <li><a href="#">Home</a></li>
-            <li><a href="franklin-7.html">Franklin</a></li>
-            <li><a href="#">Greenville</a></li>
-            <li><a href="#">Springfield</a></li>
-            <li><a href="#">Storm Center</a></li>
-            <li><a href="gallery-7.html">Gallery</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="franklin.html">Franklin</a></li>
+            <li><a href="greenville.html">Greenville</a></li>
+            <li><a href="springfield.html">Springfield</a></li>
+            <li><a href="stormcenter.html">Storm Center</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
         </ul>
     </nav>
     
     <main>
     
         <section id="listcitysec">
-            <div id="city1"><img src="images/franklin.png"><p id="city1name"></p><p id="city1motto"></p><p id="city1yearf"></p><p id="city1population"></p><p id="city1Arainfall"></p></div>
-            <div id="city2"><img src="images/greenville.png"><p id="city2name"></p><p id="city2motto"></p><p id="city2yearf"></p><p id="city2population"></p><p id="city2Arainfall"></p></div>
-            <div id="city3"><img src="images/springville.png"><p id="city3name"></p><p id="city3motto"></p><p id="city3yearf"></p><p id="city3population"></p><p id="city3Arainfall"></p></div>
+            <div id="city1"><img src="images/franklin.png" alt="franklin"><p id="city1name"></p><p id="city1motto"></p><p id="city1yearf"></p><p id="city1population"></p><p id="city1Arainfall"></p></div>
+            <div id="city2"><img src="images/greenville.png" alt="greenville"><p id="city2name"></p><p id="city2motto"></p><p id="city2yearf"></p><p id="city2population"></p><p id="city2Arainfall"></p></div>
+            <div id="city3"><img src="images/springville.png" alt="springville"><p id="city3name"></p><p id="city3motto"></p><p id="city3yearf"></p><p id="city3population"></p><p id="city3Arainfall"></p></div>
+        </section>
+        
+        <section id="stormsection">
+            <img src="images/stormcenterimage.png" alt="storm center">
         </section>
     
-    
+        <section id="citiesstripes">
+            <img src="images/citiesstripes.png" alt="cities">
+        </section>
+        
     </main>
     
+    <footer>
+        <section class="contact">
+            <p class="footertitle">Contact Info</p>
+            <p>123 Main St.</p>
+            <p>Anytown, US 99999 </p>
+            <p>999.999.9999 </p>
+            <p>contact@theurl.com</p>
+        </section>
+        <section class="footer-bar">&copy;2018 | The Weather Today | <span id="currentdate"></span>
+        </section>
+    </footer>
     
     
 <script>

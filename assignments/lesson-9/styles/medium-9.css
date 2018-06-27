@@ -18,7 +18,7 @@
     }
 
     nav {
-        background-color: #8EB0CD;
+        background-color: #688f6d;
         width: 100%;
     }
     
@@ -33,6 +33,11 @@
         padding: .5rem;
         text-align: center;
         text-decoration: none;
+    }
+    
+    #listcitysec div{
+    float: left;
+    width: 33.33%;
     }
     
     .secondsec {
