@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>The Weather Today</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content=" The Weather Today Franklin City.  ">
+    <meta name="author" content="Vinicius Maia Silveira">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <script src="scripts/include.js"></script>
+    <script src="scripts/hamburger.js"></script>
+    <script src="scripts/wayfinder.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <img src="images/download.png" alt="" id="logo">
+        <div>
+            <h1>The Weather Today</h1>
+            <h2>The most accurate forecast</h2>
+        </div>
+    </header>
+    <button class="hamburger" onclick="toggleHam()">&#9776;</button>
+    <nav>
+        <ul id="mainmenu" class="navigation">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="franklin.html">Franklin</a></li>
+            <li><a href="greenville.html">Greenville</a></li>
+            <li><a href="springfield.html">Springfield</a></li>
+            <li><a href="stormcenter.html">Storm Center</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <section id="listcitysec">
+            <div id="city1"><img src="images/franklin.png" alt="franklin"><p id="city1name"></p><p id="city1motto"></p><p id="city1yearf"></p><p id="city1population"></p><p id="city1Arainfall"></p></div>
+            <div id="city2"><img src="images/greenville.png" alt="greenville"><p id="city2name"></p><p id="city2motto"></p><p id="city2yearf"></p><p id="city2population"></p><p id="city2Arainfall"></p></div>
+            <div id="city3"><img src="images/springville.png" alt="springville"><p id="city3name"></p><p id="city3motto"></p><p id="city3yearf"></p><p id="city3population"></p><p id="city3Arainfall"></p></div>
+        </section>
+        
+        <section id="stormsection">
+            <img src="images/stormcenterimage.png" alt="storm center">
+        </section>
+    
+        <section id="citiesstripes">
+            <img src="images/citiesstripes.png" alt="cities">
+        </section>
+    </main>
+    
+<footer>
+        <section class="contact">
+            <p class="footertitle">Contact Info</p>
+            <p>123 Main St.</p>
+            <p>Anytown, US 99999 </p>
+            <p>999.999.9999 </p>
+            <p>contact@theurl.com</p>
+        </section>
+        <section class="footer-bar">&copy;2018 | The Weather Today | <span id="currentdate"></span>
+        </section>
+    </footer>
+    
+<script>
+    var section = document.querySelector('section');
+    var requestURL = 'https://byui-cit230.github.io/weather/data/towndata.json';
+    var request = new XMLHttpRequest();
+        
+    request.open('GET', requestURL);
+    request.responseType = 'json';
+    request.send();   
+        
+    request.onload = function() {
+      var citiesinfo = request.response;
+      showCities(citiesinfo);
+    }    
+        
+    function showCities(jsonObj) {
+      var cities = jsonObj['towns'];
+
+      document.getElementById('city1name').innerHTML = cities[0].name;
+      document.getElementById('city2name').innerHTML = cities[1].name;
+      document.getElementById('city3name').innerHTML = cities[3].name;    
+        
+      document.getElementById('city1motto').innerHTML = cities[0].motto;
+      document.getElementById('city2motto').innerHTML = cities[1].motto;
+      document.getElementById('city3motto').innerHTML = cities[3].motto;    
+        
+      document.getElementById('city1yearf').innerHTML = 'Founded in: ' + cities[0].yearFounded;
+      document.getElementById('city2yearf').innerHTML = 'Founded in: ' + cities[1].yearFounded;
+      document.getElementById('city3yearf').innerHTML = 'Founded in: ' + cities[3].yearFounded;    
+        
+      document.getElementById('city1population').innerHTML = 'Population: ' + cities[0].currentPopulation;
+      document.getElementById('city2population').innerHTML = 'Population: ' + cities[1].currentPopulation;
+      document.getElementById('city3population').innerHTML = 'Population: ' + cities[3].currentPopulation;    
+    
+      document.getElementById('city1Arainfall').innerHTML = 'Annual Rainfall: ' + cities[0].averageRainfall;
+      document.getElementById('city2Arainfall').innerHTML = 'Annual Rainfall: ' + cities[1].averageRainfall;
+      document.getElementById('city3Arainfall').innerHTML = 'Annual Rainfall: ' + cities[3].averageRainfall;        
+    }    
+</script>    
+    
+    <script>
+    
+        var urlString, urlArray, pageHREF, menu, i, currentURL;
+        urlString = document.location.href;
+        urlArray = urlString.split('/');
+        pageHREF = urlArray[urlArray.length - 1];
+
+        if (pageHREF !== "") {
+            menu = document.querySelectorAll('ul#mainmenu li a');
+            for (i = 0; i < menu.length; i++) {
+                currentURL = (menu[i].getAttribute('href'));
+                menu[i].parentNode.className = '';
+                if (currentURL === pageHREF) {
+                    menu[i].parentNode.className = 'active';
+                }
+            }
+        }
+</script>
+    
+</body>
+</html>

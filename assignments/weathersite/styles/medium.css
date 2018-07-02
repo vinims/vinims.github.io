@@ -1,0 +1,94 @@
+/* from small view to medium view changing/breaking at ~600px	*/
+/* 6a274f6ccb2c7781e5011ec433a0f665 */
+@media only screen and (min-width: 37.5em) {
+
+
+    .hamburger {
+        display: none;
+    }
+
+    table {
+        border-collapse: collapse;
+    }
+
+    #logo {
+        width: 25%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    nav {
+        background-color: #688f6d;
+        width: 100%;
+    }
+    
+    .navigation li {
+        display: inline-flex;
+        margin-left: .25rem;
+    }
+    
+    .navigation a {
+        display: flex;
+        color: #eee;
+        padding: .5rem;
+        text-align: center;
+        text-decoration: none;
+    }
+    
+    #listcitysec div{
+    float: left;
+    width: 33.33%;
+    }
+    
+    .secondsec {
+        display: flex;
+        justify-content: space-between; 
+    }
+    
+    .secondsec picture {
+       width:75%;
+    }
+
+    .weather-summary {
+    
+        margin: 0 auto;
+    }
+    #sunemot{
+      width: 100px;  
+    }
+    
+    .forecast {
+        display: flex;
+        border: 1px solid black;
+        width: 90%;
+        margin: 2em;
+        background-color: gray;
+    }
+
+   
+    .forecast table {
+        width: 100%;
+        border: 1px solid;
+        background-color: #f3f3f3;
+    }
+    th,
+    td {
+        border: 1px solid;
+    }
+    
+    
+    article {
+        margin: auto;
+    }
+
+    .articlediv {
+        display: flex;
+    }
+    article p,
+    .articlepic {
+        width: 50%;
+    }
+    #gallerysec {
+        grid-template-columns: auto auto;    
+    }
+}
