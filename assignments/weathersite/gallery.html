@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="styles/large.css">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <script src="scripts/hamburger.js"></script>
-        <script src="scripts/wayfinder.js"></script>
+    <script src="scripts/wayfinder.js"></script>
 
 </head>
 
@@ -55,24 +55,10 @@
         <section class="footer-bar">&copy;2018 | The Weather Today | <span id="currentdate"></span>
         </section>
     </footer>
-        <script>
-    
-        var urlString, urlArray, pageHREF, menu, i, currentURL;
-        urlString = document.location.href;
-        urlArray = urlString.split('/');
-        pageHREF = urlArray[urlArray.length - 1];
-
-        if (pageHREF !== "") {
-            menu = document.querySelectorAll('ul#mainmenu li a');
-            for (i = 0; i < menu.length; i++) {
-                currentURL = (menu[i].getAttribute('href'));
-                menu[i].parentNode.className = '';
-                if (currentURL === pageHREF) {
-                    menu[i].parentNode.className = 'active';
-                }
-            }
-        }
-</script>
+    <script src="scripts/date.js">
+    </script>
+    <script src="scripts/wayfinder.js">
+    </script>
 </body>
 
 </html>

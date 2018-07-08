@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="styles/large.css">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <script src="scripts/hamburger.js"></script>
-        <script src="scripts/wayfinder.js"></script>
+    <script src="scripts/wayfinder.js"></script>
 
 
 </head>
@@ -44,37 +44,42 @@
 
     <main>
         <section class="secondsec">
-        <picture>
-            <source media="(min-width: 64em)" srcset="images/franklin-originalreduced.jpg">
-            <source media="(min-width: 37.5em)" srcset="images/building-cc0-city-89485.jpg">
-            <img class="mainimage" src="images/buildings-city-manhattan-40142.jpg" alt="">
-        </picture>
+            <picture>
+                <source media="(min-width: 64em)" srcset="images/franklin-originalreduced.jpg">
+                <source media="(min-width: 37.5em)" srcset="images/building-cc0-city-89485.jpg">
+                <img class="mainimage" src="images/buildings-city-manhattan-40142.jpg" alt="">
+            </picture>
 
-        <section class="weather-summary">
-            <div>
-                <p id="Wdescription">Sunny</p>
-                <p>High: </p><p id="highT">90°F</p>
-            </div>
-            <div>
-                <h2>Springfield</h2>
-                <picture>
-                    <img id="sunemot" src="" alt="sun">
-                </picture>
-                <div class="conditions">
-                    <p>Precipitation: 0%</p>
-                    <p>Wind Speed:</p><p id="windS">5 mpg SW</p>
-                    <p>Wind Chill:</p><p id="windchillvalue"></p>
+            <section class="weather-summary">
+                <div>
+                    <p id="Wdescription">Sunny</p>
+                    <p>High: </p>
+                    <p id="highT">90°F</p>
                 </div>
-            </div>
-            <div>
-                <p>Current Temperature: </p><p id="TempC">66°F</p>
-                <p>Low: </p><p id="LowT">66°F</p>
-            </div>
-            <br>
+                <div>
+                    <h2>Springfield</h2>
+                    <picture>
+                        <img id="sunemot" src="" alt="sun">
+                    </picture>
+                    <div class="conditions">
+                        <p>Precipitation: 0%</p>
+                        <p>Wind Speed:</p>
+                        <p id="windS">5 mpg SW</p>
+                        <p>Wind Chill:</p>
+                        <p id="windchillvalue"></p>
+                    </div>
+                </div>
+                <div>
+                    <p>Current Temperature: </p>
+                    <p id="TempC">66°F</p>
+                    <p>Low: </p>
+                    <p id="LowT">66°F</p>
+                </div>
+                <br>
 
+            </section>
         </section>
-        </section>
-        
+
         <h3>Ten Day Forecast</h3>
         <section class="forecast">
             <table>
@@ -92,7 +97,7 @@
                         <th>Day 10</th>
                     </tr>
                 </thead>
-                
+
                 <tbody>
                     <tr>
                         <td>89&deg;F</td>
@@ -113,11 +118,11 @@
         <article>
             <h3>Springfield Breaks Record</h3>
             <div class="articlediv">
-            <p class="town-article">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
-            </p>
-            <img src="images/architecture-bridge-brooklyn-bridge-416053.jpg" class="articlepic" alt="Springfield pic">
-            </div>    
+                <p class="town-article">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
+                </p>
+                <img src="images/architecture-bridge-brooklyn-bridge-416053.jpg" class="articlepic" alt="Springfield pic">
+            </div>
         </article>
 
     </main>
@@ -133,57 +138,27 @@
         <section class="footer-bar">&copy;2018 | The Weather Today | <span id="currentdate"></span>
         </section>
     </footer>
-    <script>
-        var d = new Date();
-        var weekday = new Array(7);
-        weekday[0] = "Sunday";
-        weekday[1] = "Monday";
-        weekday[2] = "Tuesday";
-        weekday[3] = "Wednesday";
-        weekday[4] = "Thursday";
-        weekday[5] = "Friday";
-        weekday[6] = "Saturday";
-
-        var month = new Array(12);
-        month[0] = "January";
-        month[1] = "February";
-        month[2] = "March";
-        month[3] = "April";
-        month[4] = "May";
-        month[5] = "June";
-        month[6] = "July";
-        month[7] = "August";
-        month[8] = "September";
-        month[9] = "October";
-        month[10] = "November";
-        month[11] = "December";
-
-        var setweek = weekday[d.getDay()];
-        var setday = d.getDate();
-        var setmonth = month[d.getMonth()];
-        var setyear = d.getFullYear();
-
-        document.getElementById("currentdate").innerHTML = setweek + ", " + setday + " " + setmonth + " " + setyear;
-    </script>    
+    <script src="scripts/date.js">
+    </script>
     <script>
         var weatherRequest = new XMLHttpRequest();
 
-        var apiURL = "http://api.openweathermap.org/data/2.5/forecast?id=4409896&APPID=6a274f6ccb2c7781e5011ec433a0f665&units=Imperial";
+        var apiURL = "//api.openweathermap.org/data/2.5/forecast?id=4409896&APPID=6a274f6ccb2c7781e5011ec433a0f665&units=Imperial";
 
         weatherRequest.open('GET', apiURL, true);
-        weatherRequest.send();   
+        weatherRequest.send();
 
-        weatherRequest.onload =  function () {
-          var weatherData = JSON.parse(weatherRequest.responseText);
-            
+        weatherRequest.onload = function() {
+            var weatherData = JSON.parse(weatherRequest.responseText);
+
             var apiWdescription = weatherData.list[0].weather[0].main;
             var apiTempC = weatherData.list[0].main.temp;
             var apihighT = weatherData.list[0].main.temp_max;
             var apiLowT = weatherData.list[0].main.temp_min;
             var apiwindS = weatherData.list[0].wind.speed;
             var apiIcon = weatherData.list[0].weather[0].icon;
-            var iconURL = 'http://openweathermap.org/img/w/' + apiIcon + '.png';
-            
+            var iconURL = '//openweathermap.org/img/w/' + apiIcon + '.png';
+
             document.getElementById('Wdescription').innerHTML = apiWdescription;
             document.getElementById('TempC').innerHTML = apiTempC + ' °F';
             document.getElementById('highT').innerHTML = apihighT + ' °F';
@@ -191,26 +166,9 @@
             document.getElementById('windS').innerHTML = apiwindS + ' mpg SW';
             document.getElementById('sunemot').src = iconURL;
         };
-
     </script>
-        <script>
-    
-        var urlString, urlArray, pageHREF, menu, i, currentURL;
-        urlString = document.location.href;
-        urlArray = urlString.split('/');
-        pageHREF = urlArray[urlArray.length - 1];
-
-        if (pageHREF !== "") {
-            menu = document.querySelectorAll('ul#mainmenu li a');
-            for (i = 0; i < menu.length; i++) {
-                currentURL = (menu[i].getAttribute('href'));
-                menu[i].parentNode.className = '';
-                if (currentURL === pageHREF) {
-                    menu[i].parentNode.className = 'active';
-                }
-            }
-        }
-</script>
+    <script src="scripts/wayfinder.js">
+    </script>
 </body>
 
 </html>

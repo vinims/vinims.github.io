@@ -151,7 +151,7 @@
             var apiLowT = weatherData.list[0].main.temp_min;
             var apiwindS = weatherData.list[0].wind.speed;
             var apiIcon = weatherData.list[0].weather[0].icon;
-            var iconURL = 'http://openweathermap.org/img/w/' + apiIcon + '.png';
+            var iconURL = '//openweathermap.org/img/w/' + apiIcon + '.png';
             
             document.getElementById('Wdescription').innerHTML = apiWdescription;
             document.getElementById('TempC').innerHTML = apiTempC + ' °F';
