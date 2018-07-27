@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>The Weather Today</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content=" The Weather Today Franklin City.  ">
+    <meta name="author" content="Vinicius Maia Silveira">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <script src="scripts/hamburger.js"></script>
+    <script src="scripts/wayfinder.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <img src="images/MBLogo.png" alt="" id="logo">
+        <div>
+            <h1>The Mountain Spoke</h1>
+            <h2>Ride on the beauty of Montana</h2>
+        </div>
+
+        <nav>
+            <ul id="mainmenu" class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tours.html">Tours</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <button class="hamburger" onclick="toggleHam()">&#9776;</button>
+
+    <main>
+        <div>
+            <picture>
+                <source media="(min-width: 37.5em)" srcset="images/BozemonViewMedium.png">
+                <img class="mainimage" src="images/Depositphotos_8138068_xl-2015.jpg" alt="">
+            </picture>
+            <p>The weather in Bozeman today:</p>
+            <img id="weathercondition" src="" alt="weathercondition">
+            <p id="weathertemp">60 F</p>
+        </div>
+    </main>
+
+    <footer>
+        <section class="contact">
+            <p class="footertitle">Contact Info</p>
+            <p>123 Main St.</p>
+            <p>Anytown, US 99999 </p>
+            <p>999.999.9999 </p>
+            <p>contact@theurl.com</p>
+        </section>
+        <section class="footer-bar">&copy;2018 | The Weather Today | <span id="currentdate"></span>
+        </section>
+    </footer>
+    <script src="scripts/date.js">
+    </script>
+    <script src="scripts/wayfinder.js">
+    </script>
+    <script src="scripts/weatherapi.js">
+    </script>
+    <script>
+        bozemanweather();
+    </script>
+
+</body>
+
+</html>

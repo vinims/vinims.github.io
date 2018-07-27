@@ -1,0 +1,201 @@
+* {
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+
+}
+
+body {
+    background-color: black;
+}
+
+.hamburger {
+    display: block;
+    position: absolute;
+    top: 2.0rem;
+    right: 1.25rem;
+    z-index: 1300;
+}
+
+.navigation {
+    list-style: none;
+    padding-left: 0;
+}
+
+.navigation li {
+    display: none;
+}
+
+/* When the responsive class is added to the unordered list on hamburger button click 
+placed in a media query in order to accomodate the toggle when in wider view*/
+
+@media only screen and (max-width: 37.5em) {
+    .navigation.responsive {
+        position: relative;
+        z-index: 1200;
+    }
+    .navigation.responsive li {
+        background-color: #eee;
+        display: block;
+        width: 100%;
+        margin: 2px 0;
+        border: 1px solid #ddd;
+    }
+    .navigation.responsive li a {
+        padding: 1rem;
+        text-align: center;
+        display: block;
+        text-decoration: none;
+    }
+    .navigation.responsive li a:hover {
+        background-color: #ddd;
+    }
+}
+
+header {
+    position: absolute;
+    width: 100%;
+    display: flex;
+}
+
+nav {
+    width: 100%;
+    position: absolute;
+}
+
+#logo {
+    z-index: 1000;
+    width: 70px;
+}
+
+header div h1 {
+    width: 100%;
+    font-size: 25px;
+    margin-left: 5%;
+    color: darkorange;
+    margin-top: 10px;
+}
+
+header div h2 {
+    width: 100%;
+    font-size: 15px;
+    margin-left: 5%;
+}
+
+.active {
+    background-color: darkgreen;
+}
+
+.mainimage {
+    width: 100%;
+}
+
+
+#logo {
+    width: 70px;
+    height: 70px;
+    margin-left: 5%;
+}
+
+#weathercondition{
+    position: absolute;
+    top: 12%;
+    left: 20%;
+    width: 100px;
+}
+
+#weathertemp{
+    position: absolute;
+    top: 12%;
+    right: 20%;
+    color: white;
+    font-size: 30px;
+}
+
+
+article {
+    margin: auto;
+    width: 90%;
+    border: 1px solid gray;
+}
+
+footer {
+    background-color: #688f6d;
+    padding-top: 10px;
+    width: 100%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.footertitle {
+    font-weight: bold;
+}
+
+.contact p {
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+.footer-bar {
+    margin-top: 10px;
+    background-color: #007EC4;
+    color: white;
+}
+
+.articlepic {
+    width: 80%;
+}
+
+/* Gallery */
+
+#gallerysec {
+    display: grid;
+    grid-template-columns: auto;
+}
+
+#gallerysec a img:hover {
+    box-shadow: 5px 5px 10px gray;
+
+}
+
+/* FORM */
+
+form {}
+
+fieldset {
+    border: 1px solid black;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+
+label {
+    text-align: left;
+    display: block;
+    padding-top: 1.5rem;
+}
+
+input,
+select {
+    display: block;
+    padding: .75em;
+    text-align: left;
+}
+
+span {
+    display: block;
+}
+
+.Userdanger {
+    text-align: left;
+    padding-top: 1.5rem;
+}
+
+.Userdanger input {
+    float: left;
+    display: inline-block;
+}
+
+.submitBtn {
+    margin: 0 auto;
+}
