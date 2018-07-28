@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>The Weather Today</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content=" The Weather Today Franklin City.  ">
+    <meta name="author" content="Vinicius Maia Silveira">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <script src="scripts/hamburger.js"></script>
+    <script src="scripts/wayfinder.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <img src="images/MBLogo.png" alt="" id="logo">
+        <div>
+            <h1>The Mountain Spoke</h1>
+            <h2>Ride on the beauty of Montana</h2>
+        </div>
+
+        <nav>
+            <ul id="mainmenu" class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tours.html">Tours</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <button class="hamburger" onclick="toggleHam()">&#9776;</button>
+
+    <main>
+        <section>
+            <div>
+                <picture>
+                    <source media="(min-width: 37.5em)" srcset="images/BozemonViewMedium.png">
+                    <img class="mainimage" src="images/Depositphotos_8138068_xl-2015.jpg" alt="">
+                </picture>
+            </div>
+        </section>
+        
+        <section id="toursoptions">
+            <div><a href="#"><img class="grid-item" src="images/dudejumping.jpg"><br><p>Adventure Tour</p></a>
+                <p>The best option for adrenaline junkies around, the adventure tour includes lift to the top of the montain and we have option for bike rentals, check it out!</p><br>
+                <p>length: 17 miles downhill</p><br>
+                <p>Advance level of downhill bike riding required</p><br>
+                <p>Cost: Lift $18 Full day / $10 half day</p><br>
+                <p>Location: East side of the Lift</p>
+            </div>
+            <div><a href="#"><img class="grid-item" src="images/familyriding.jpg"><br><p>Family Rides</p></a>
+            <p>Enjoy these beautyful landscapes and trail with the people who most you care for, bring your family and friends to an amazing experience!</p><br>
+                <p>length: 20 miles</p><br>
+                <p>Basic level of biking, kids under 6 to only with side wheels bikes</p><br>
+                <p>Cost: $35 bike rental full day / $25 half day / Kids bike $10</p><br>
+                <p>Location: West side of the Lift</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <section class="contact">
+            <p class="footertitle">Contact Info</p>
+            <p>3950 Valley Commons Drive</p>
+            <p>Bozeman, MT 99999 </p>
+            <p>999.999.9999 </p>
+            <p>contact@themountainspoke.com</p>
+        </section>
+        <section class="footer-bar">&copy;2018 | The Mountain Spoke | <span id="currentdate"></span>
+        </section>
+    </footer>
+    <script src="scripts/date.js">
+    </script>
+    <script src="scripts/wayfinder.js">
+    </script>
+    <script src="scripts/weatherapi.js">
+    </script>
+    <script>
+        bozemanweather();
+    </script>
+
+</body>
+
+</html>

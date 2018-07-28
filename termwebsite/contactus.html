@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>The Weather Today</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content=" The Weather Today Franklin City.  ">
+    <meta name="author" content="Vinicius Maia Silveira">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <script src="scripts/hamburger.js"></script>
+    <script src="scripts/wayfinder.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <img src="images/MBLogo.png" alt="" id="logo">
+        <div>
+            <h1>The Mountain Spoke</h1>
+            <h2>Ride on the beauty of Montana</h2>
+        </div>
+
+        <nav>
+            <ul id="mainmenu" class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tours.html">Tours</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <button class="hamburger" onclick="toggleHam()">&#9776;</button>
+
+    <main>
+        <section>
+            <div>
+                <picture>
+                    <source media="(min-width: 37.5em)" srcset="images/BozemonViewMedium.png">
+                    <img class="mainimage" src="images/Depositphotos_8138068_xl-2015.jpg" alt="">
+                </picture>
+            </div>
+        </section>
+        
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2787.9316277611006!2d-111.09290618415078!3d45.67227287910401!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5345459ab72cb6df%3A0xbb98968f9648ea88!2s3950+Valley+Commons+Dr%2C+Bozeman%2C+MT+59718!5e0!3m2!1spt-PT!2sus!4v1532803824690" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        
+        <section>
+        <form method="get" action="thanks.html">
+            <fieldset>
+                <legend>Contact Us</legend>
+                <label>Full Name* <input type="text" name="fname" pattern="[A-Za-z]{5}" required></label>
+                <label>Email* <input type="email" name="email" placeholder="someone@gmail.com" required></label>
+                <label>Phone* <input type="tel" name="phone" placeholder="1235551234" required></label>
+                <label>Birth Date <input type="date" name="BirthDate"></label>
+                <label>Home State or Coutry <input type="text" name="fname" pattern="[A-Za-z]{5}"></label>
+                <label>You Message <input id="textarea" type="text" name="message" pattern="[A-Za-z]{5}"></label><br>
+                <input class="submitBtn" type="submit" value="Send Message">
+            </fieldset>
+        </form>
+        
+        </section>
+
+    </main>
+
+    <footer>
+        <section class="contact">
+            <p class="footertitle">Contact Info</p>
+            <p>3950 Valley Commons Drive</p>
+            <p>Bozeman, MT 99999 </p>
+            <p>999.999.9999 </p>
+            <p>contact@themountainspoke.com</p>
+        </section>
+        <section class="footer-bar">&copy;2018 | The Mountain Spoke | <span id="currentdate"></span>
+        </section>
+    </footer>
+    <script src="scripts/date.js">
+    </script>
+    <script src="scripts/wayfinder.js">
+    </script>
+    <script src="scripts/weatherapi.js">
+    </script>
+    <script>
+        bozemanweather();
+    </script>
+
+</body>
+
+</html>

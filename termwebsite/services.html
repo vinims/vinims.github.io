@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>The Weather Today</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content=" The Weather Today Franklin City.  ">
+    <meta name="author" content="Vinicius Maia Silveira">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <script src="scripts/hamburger.js"></script>
+    <script src="scripts/wayfinder.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <img src="images/MBLogo.png" alt="" id="logo">
+        <div>
+            <h1>The Mountain Spoke</h1>
+            <h2>Ride on the beauty of Montana</h2>
+        </div>
+
+        <nav>
+            <ul id="mainmenu" class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tours.html">Tours</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <button class="hamburger" onclick="toggleHam()">&#9776;</button>
+
+    <main>
+        <section>
+            <div>
+                <picture>
+                    <source media="(min-width: 37.5em)" srcset="images/manybikeslargesreen.jpg">
+                    <img class="mainimage" src="images/manybikes.jpg" alt="">
+                </picture>
+            </div>
+        </section>
+
+        <section id="tablesection">
+            <table style="width:100%">
+                <thead>
+                    <tr style="background-color:#7fb9c2">
+                        <th colspan="2">Service Pricing</th>
+                    </tr>
+                    <tr style="background-color:#628ca6; color: white;">
+                        <th>Service</th>
+                        <th>Cost</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background-color:#e7f0ed">
+                        <td>Tire Replacement</td>
+                        <td>$125</td>
+                        
+                    </tr>
+                    <tr style="background-color:#e7ffed">
+                        <td>Suspension Inspection</td>
+                        <td>$140</td>
+                        
+                    </tr>
+                    <tr style="background-color:#e7f0ed">
+                        <td>Bike Cleaning</td>
+                        <td>$89</td>
+                        
+                    </tr>
+                    <tr style="background-color:#e7ffed">
+                        <td>Tire airfilling</td>
+                        <td>$25</td>
+                        
+                    </tr>
+                    <tr style="background-color:#e7f0ed">
+                        <td>Fork replacement</td>
+                        <td>$199</td>
+                    </tr>
+                    <tr style="background-color:#e7ffed">
+                        <td>Pedal replacement</td>
+                        <td>$149</td>
+                        
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th colspan="3">Thank you for chose Montain Spoke</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+    </main>
+
+    <footer>
+        <section class="contact">
+            <p class="footertitle">Contact Info</p>
+            <p>3950 Valley Commons Drive</p>
+            <p>Bozeman, MT 99999 </p>
+            <p>999.999.9999 </p>
+            <p>contact@themountainspoke.com</p>
+        </section>
+        <section class="footer-bar">&copy;2018 | The Mountain Spoke | <span id="currentdate"></span>
+        </section>
+    </footer>
+    <script src="scripts/date.js">
+    </script>
+    <script src="scripts/wayfinder.js">
+    </script>
+    <script src="scripts/weatherapi.js">
+    </script>
+    <script>
+        bozemanweather();
+    </script>
+
+</body>
+
+</html>

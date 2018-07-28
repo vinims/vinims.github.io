@@ -4,9 +4,7 @@
 
 }
 
-body {
-    background-color: black;
-}
+body {}
 
 .hamburger {
     display: block;
@@ -69,7 +67,7 @@ nav {
 
 header div h1 {
     width: 100%;
-    font-size: 25px;
+    font-size: 20px;
     margin-left: 5%;
     color: darkorange;
     margin-top: 10px;
@@ -77,12 +75,15 @@ header div h1 {
 
 header div h2 {
     width: 100%;
-    font-size: 15px;
+    font-size: 13px;
     margin-left: 5%;
 }
 
 .active {
-    background-color: darkgreen;
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    background-color: darkgoldenrod;
 }
 
 .mainimage {
@@ -96,30 +97,92 @@ header div h2 {
     margin-left: 5%;
 }
 
-#weathercondition{
-    position: absolute;
-    top: 12%;
-    left: 20%;
+#weathersection div {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+    justify-content: center;
+    align-self: center;
+}
+
+#weathertitle {
+    flex: 1 100%;
+}
+
+#weathercondition {
+    width: 150px;
+    height: 100px;
+    flex: 2 50%;
+    order: 1;
+
+}
+
+#weathercondition img {
     width: 100px;
 }
 
-#weathertemp{
-    position: absolute;
-    top: 12%;
-    right: 20%;
-    color: white;
+#weathertemp {
     font-size: 30px;
+    margin: 0;
+    flex: 2 50%;
+    order: 2;
 }
 
+#weathertemp img {
+    width: 60px;
+    height: 60px;
+    margin-top: 15px;
+}
 
-article {
-    margin: auto;
+.parallax {
+    /* The image used */
+    background-image: url('../images/MontanaLandscape.jpg');
+
+    /* Full height */
+    height: 400px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Options */
+
+#siteoptions {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: auto;
+    width: 100%;
+}
+
+#siteoptions a img {
     width: 90%;
-    border: 1px solid gray;
+    margin-top: 40px;
 }
+
+#siteoptions a {
+    text-decoration: none;
+}
+
+#siteoptions p {
+    font-size: 30px;
+    margin-top: -50px;
+    color: darkorange;
+    text-decoration: none;
+
+}
+
+#siteoptions a img:hover {
+    box-shadow: 5px 5px 10px gray;
+
+}
+
+/* Footer */
 
 footer {
-    background-color: #688f6d;
+    background-color: darkorange;
     padding-top: 10px;
     width: 100%;
     margin: auto;
@@ -137,24 +200,127 @@ footer {
 
 .footer-bar {
     margin-top: 10px;
-    background-color: #007EC4;
+    background-color: darkorange;
     color: white;
 }
 
-.articlepic {
-    width: 80%;
-}
+/* Tours Options */
 
-/* Gallery */
-
-#gallerysec {
+#toursoptions {
+    margin-top: 50px;
     display: grid;
     grid-template-columns: auto;
+    width: 100%;
 }
 
-#gallerysec a img:hover {
-    box-shadow: 5px 5px 10px gray;
+#toursoptions a img {
+    width: 90%;
+    margin-top: 40px;
+}
 
+#toursoptions a {
+    text-decoration: none;
+}
+
+#toursoptions div p {
+    color: black;
+    text-align: left;
+    font-family: lora;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+
+#toursoptions a p {
+    font-size: 30px;
+    color: darkorange;
+    text-decoration: none;
+    text-align: center;
+}
+
+#siteoptions a img:hover {
+    box-shadow: 5px 5px 10px gray;
+}
+
+/* EVENT PAGE */
+
+#eventtitle {
+    top: 150px;
+    font-size: 20px;
+    color: darkorange;
+
+}
+
+#eventdata {
+    display: grid;
+    grid-template-columns: 100%;
+    font-size: 14px;
+    color: darkorange;
+}
+
+#eventdata p {
+    margin: 10px 10%;
+}
+
+/* SHOP PAGE */
+
+#ShopOptions {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: auto;
+    width: 100%;
+    
+}
+
+#ShopOptions a {
+    border: 1px solid black;
+    margin-left: 5%; 
+    margin-right: 5%;
+    margin-bottom: 5%;
+}
+
+
+#ShopOptions a img {
+    width: 90%;
+}
+
+#ShopOptions a {
+    text-decoration: none;
+}
+
+#ShopOptions p {
+    font-size: 30px;
+    margin-top: -10px;
+    color: darkorange;
+    text-decoration: none;
+    
+}
+
+#ShopOptions a div p {
+    margin-top: 0px;
+    margin-left: 7%;
+    margin-right: 7%;
+    color: black;
+    font-size: 14px;
+}
+#ShopOptions a:hover {
+    box-shadow: 5px 5px 10px gray;
+}
+
+#servicesbtn {
+    font-size: 20px;
+    background-color: darkorange;
+    width: 300px;
+    text-decoration: none;
+    color: black;
+}
+
+/* Service PAGE */
+
+#tablesection{
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 50%;
 }
 
 /* FORM */
@@ -167,6 +333,7 @@ fieldset {
     max-width: 500px;
     margin: 0 auto;
     margin-bottom: 15px;
+    margin-top: 30px;
 }
 
 label {

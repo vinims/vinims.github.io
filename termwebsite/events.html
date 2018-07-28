@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>The Weather Today</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content=" The Weather Today Franklin City.  ">
+    <meta name="author" content="Vinicius Maia Silveira">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Lora" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <script src="scripts/hamburger.js"></script>
+    <script src="scripts/wayfinder.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <img src="images/MBLogo.png" alt="" id="logo">
+        <div>
+            <h1>The Mountain Spoke</h1>
+            <h2>Ride on the beauty of Montana</h2>
+        </div>
+
+        <nav>
+            <ul id="mainmenu" class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tours.html">Tours</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <button class="hamburger" onclick="toggleHam()">&#9776;</button>
+
+    <main>
+        <section>
+            <div>
+                <picture>
+                    <source media="(min-width: 37.5em)" srcset="images/BozemonViewMedium.png">
+                    <img class="mainimage" src="images/Depositphotos_8138068_xl-2015.jpg" alt="">
+                </picture>
+            </div>
+        </section>
+        <section>
+            <h1 id="eventtitle">Cycle the Continental Divide</h1>
+            <picture>
+                    <source media="(min-width: 37.5em)" srcset="images/groupbikerslargescre.jpg">
+                    <img class="mainimage" src="images/groupbikers.jpg" alt="groupbikers">
+            </picture>
+            <div id="eventdata">
+            <p>Date: August 28</p>
+            <p>Route: Ride to Bozeman via the north gravel side of Saint Helens Rd and the paved length of the Gifford Pinchot National Forest</p>
+            <p>Registration Cost: $35</p>
+            <p>Basic req: Trail or endure bike, helmet and registration number</p>
+            </div>
+        </section>
+        <section>
+        <form method="get" action="thanks.html">
+            <fieldset>
+                <legend>Registration</legend>
+                <label>Full Name* <input type="text" name="fname" pattern="[A-Za-z]{5}" required></label>
+                <label>Email* <input type="email" name="email" placeholder="someone@gmail.com" required></label>
+                <label>Phone* <input type="tel" name="phone" placeholder="1235551234" required></label>
+                <label>Birth Date <input type="date" name="BirthDate"></label>
+                <label>Home State or Coutry <input type="text" name="fname" pattern="[A-Za-z]{5}"></label>
+                <label>Extra comments about accommodations <input type="text" name="fname" pattern="[A-Za-z]{5}"></label><br>
+                <input class="submitBtn" type="submit" value="Register">
+            </fieldset>
+
+
+        </form>
+        </section>
+    </main>
+
+    <footer>
+        <section class="contact">
+            <p class="footertitle">Contact Info</p>
+            <p>3950 Valley Commons Drive</p>
+            <p>Bozeman, MT 99999 </p>
+            <p>999.999.9999 </p>
+            <p>contact@themountainspoke.com</p>
+        </section>
+        <section class="footer-bar">&copy;2018 | The Mountain Spoke | <span id="currentdate"></span>
+        </section>
+    </footer>
+    <script src="scripts/date.js">
+    </script>
+    <script src="scripts/wayfinder.js">
+    </script>
+    <script src="scripts/weatherapi.js">
+    </script>
+    <script>
+        bozemanweather();
+    </script>
+
+</body>
+
+</html>

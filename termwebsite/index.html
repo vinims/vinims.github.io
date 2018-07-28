@@ -38,26 +38,49 @@
     <button class="hamburger" onclick="toggleHam()">&#9776;</button>
 
     <main>
-        <div>
-            <picture>
-                <source media="(min-width: 37.5em)" srcset="images/BozemonViewMedium.png">
-                <img class="mainimage" src="images/Depositphotos_8138068_xl-2015.jpg" alt="">
-            </picture>
-            <p>The weather in Bozeman today:</p>
-            <img id="weathercondition" src="" alt="weathercondition">
-            <p id="weathertemp">60 F</p>
-        </div>
+        <section>
+            <div>
+                <picture>
+                    <source media="(min-width: 37.5em)" srcset="images/BozemonViewMedium.png">
+                    <img class="mainimage" src="images/Depositphotos_8138068_xl-2015.jpg" alt="">
+                </picture>
+            </div>
+        </section>
+        <section id="weathersection">
+            <div>
+                <p id="weathertitle">The weather in Bozeman today:</p>
+                <div id="weathercondition">
+                    <img id="weathericon" src="" alt="weathercondition">
+                </div>
+
+                <div id="weathertemp">
+                    <img src="images/temperature.png" alt="weathertempicon">
+                    <p id="weathertempFah">60 F</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="parallaxpicsection">
+            <div class="parallax" src=""></div>
+        </section>
+
+        <section id="siteoptions">
+            <a href="#"><img class="grid-item" src="images/dudejumping.jpg"><br><p>Adventure</p></a>
+            <a href="#"><img class="grid-item" src="images/familyriding.jpg"><br><p>Family Rides</p></a>
+            <a href="#"><img class="grid-item" src="images/manybikes.jpg"><br><p>Shop</p></a>
+        </section>
+
     </main>
 
     <footer>
         <section class="contact">
             <p class="footertitle">Contact Info</p>
-            <p>123 Main St.</p>
-            <p>Anytown, US 99999 </p>
+            <p>3950 Valley Commons Drive</p>
+            <p>Bozeman, MT 99999 </p>
             <p>999.999.9999 </p>
-            <p>contact@theurl.com</p>
+            <p>contact@themountainspoke.com</p>
         </section>
-        <section class="footer-bar">&copy;2018 | The Weather Today | <span id="currentdate"></span>
+        <section class="footer-bar">&copy;2018 | The Mountain Spoke | <span id="currentdate"></span>
         </section>
     </footer>
     <script src="scripts/date.js">
